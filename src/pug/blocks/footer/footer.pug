@@ -1,0 +1,15 @@
+mixin footer()
+    footer.footer.lazy(data-src="/assets/img/bg_footer.jpg")
+        .footer__inner
+            .footer__copyright
+                p @2020 Морозкина сказка
+                a(href="/") Политика обработки и защиты персональных данных
+                +developer()
+            .footer__social
+                p
+                    strong Мы в соцсетях:
+                +social()
+            .footer__contacts
+                +phone('phone_footer')
+                +email()
+                +address()

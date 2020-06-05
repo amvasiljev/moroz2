@@ -1,0 +1,93 @@
+.event{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: @gold_2;
+    align-items: center;
+    box-shadow: @box_2;
+    padding: 0 0 20px 0;
+    @media @1200{
+        width: calc(33% - 15px);
+       
+    }
+    @media @1024{
+        width: calc(33% - 15px);
+    }
+    @media @768{
+        width: calc(50% - 15px);
+        margin-bottom: 20px;
+    }
+    &__image{
+        height: 320px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        @media @1200{
+            background-position: center  0;
+        }
+        @media @1024{
+            background-position: center  0;
+        }
+        @media @768{
+            background-position: center  0;
+        }
+        @media @320{
+            background-image: unset !important;
+            height: 113px;
+        }
+    }
+    &__title{
+        .rem(24);
+        color: @red;
+        font-family: @font_2;
+        font-weight: 600;
+        height: 113px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__list{
+        padding: 10px;
+        width: 100%;
+        li{
+            .rem(14);
+            color: @bk;
+            margin-bottom: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            &:before{
+                content:'';
+                display: block;
+                height: 12px;
+                width: 12px;
+                flex: 0 0 12px;
+                align-self: flex-start;
+                background: url('/assets/img/point.png') center center no-repeat;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+        }
+    }
+    &__price{
+        .rem(24);
+        color: @red;
+        font-family: @font_2;
+        font-weight: 600;
+        text-align: center;
+        padding: 0 0 25px;
+    }
+}

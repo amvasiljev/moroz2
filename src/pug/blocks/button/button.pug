@@ -1,0 +1,7 @@
+mixin button(text,cl,link,id)
+    if id
+        a.button(href="javascript:;" class= cl data-fancybox="" data-src= id)= text
+    else
+        a.button(href="/" class= cl)= text
+    
+    

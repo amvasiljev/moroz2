@@ -1,0 +1,126 @@
+.header{
+    width: 100%;
+    @media @768{
+      background-image: unset !important;
+      background-color: @red;
+    }
+    @media @320{
+      background-image: unset !important;
+      background-color: @red;
+        height: 100%;
+        height: unset;
+    }
+    
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    &__inner{
+        height: 755px;
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        @media @1024{
+            padding: 0 30px;
+        }
+        @media @768{
+            padding: 0 90px 0 0;
+            height: unset;
+        }
+        @media @320{
+            padding: 0 10px;
+            height: unset;
+            flex-flow: wrap;
+            justify-content: center;
+            align-items: flex-start;
+           height: 270px;
+           height: unset;
+        }
+    }
+    &__logo{
+        width: 280px;
+        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        @media @320{
+            width: auto;
+            justify-content: center;
+        }
+    }
+    &__buttons{
+        width: 600px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media @768{
+           order: 3;
+           width: auto;
+         }
+         @media @320{
+           order: 3;
+           height: 175px;
+         }
+    }
+    &__content{
+        height: 270px;
+        width: 372px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 0 32px;
+        @media @768{
+            height: auto;
+            width: auto;
+            .button{
+                margin: 10px 0;
+                
+            }
+         }
+         @media @320{
+            height: auto;
+            width: auto;
+            padding: 0;
+            .button{
+                margin: 10px 0;
+
+            }
+         }
+    }
+    &__title{
+        .rem(50);
+        font-family: @font_2;
+        color: @wt;
+        line-height: 50px;
+        @media @768{
+           display: none;
+        }
+        @media @320{
+           display: none;
+        }
+    }
+    &__callback{
+        width: 300px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media @768{
+            .button{
+                display: none;
+            }
+            order: 2;
+            height: unset;
+         }
+         @media @320{
+            .button{
+                display: none;
+            }
+            order: 2;
+            height: 110px;
+         }
+    }
+}

@@ -1,0 +1,100 @@
+.gallery{
+    width: 100%;
+    padding: 0 0 40px 0;
+
+    @media @320{
+        padding: 0;
+    }
+    &__box{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "pos_1 pos_2 pos_3"
+                              "pos_4 pos_2 pos_5"
+                              "pos_6 pos_6 pos_5";
+        grid-gap: 20px;
+        margin-bottom: 20px;
+        @media @320{
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'pos_1 pos_2'
+                                'pos_3 pos_4'
+                                'pos_5 pos_6';
+            grid-gap:10px;
+            margin-bottom: 10px;
+        }
+    }
+    &__item{
+        display: flex;
+        height: 300px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        box-shadow: @box_2;
+        position: relative;
+
+        @media @768{
+           height: 200px;
+        }
+        @media @320{
+           height: 150px;
+        }
+        @media @768{
+           height: 200px;
+        }
+        
+        &:before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.2);
+            background-image: url(/assets/img/zoom.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &:hover:before{
+            display: block;
+        }
+
+        &_height{
+            height: 620px;
+            @media @768{
+                height: 420px;
+            }
+            @media @320{
+                height: 150px;
+            }
+        }
+        &_width{
+            width: 100%;
+        }
+        &_pos_1{
+            grid-area: pos_1;
+        }
+        &_pos_2{
+            grid-area: pos_2;
+        }
+        &_pos_3{
+            grid-area: pos_3;
+        }
+        &_pos_4{
+            grid-area: pos_4;
+        }
+        &_pos_5{
+            grid-area: pos_5;
+        }
+        &_pos_6{
+            grid-area: pos_6;
+        }
+  
+        img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+    }
+    
+  }

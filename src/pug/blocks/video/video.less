@@ -1,0 +1,73 @@
+.video {
+    max-width: 720px;
+    margin: 0 auto;
+    max-height: 370px;
+
+    @media @320{
+        margin-bottom: 20px;
+    }
+
+
+    &__code {
+        background-color: @wt;
+        // margin-bottom: 30px;
+        position: relative;
+        padding-top: 63.25%;
+        overflow: hidden;
+        cursor: pointer;
+        width: 100%;
+        max-height: 370px;
+        img {
+            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.7;
+            height: 100%;
+            max-height: 370px;
+        }
+
+        iframe {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            max-height: 370px;
+        }
+    }
+
+
+
+    &__button {
+        width: 90px;
+        height: 60px;
+        background-color: #333;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        opacity: 0.8;
+        border-radius: 6px;
+        cursor: pointer;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        position: absolute;
+
+        &:before {
+            content: "";
+            border-style: solid;
+            border-width: 15px 0 15px 26px;
+            border-color: transparent transparent transparent #fff;
+            cursor: pointer;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            position: absolute;
+        }
+    }
+
+
+}

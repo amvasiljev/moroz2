@@ -1,0 +1,66 @@
+
+include ../blocks/address/address
+include ../blocks/burger/burger
+include ../blocks/button/button
+include ../blocks/city/city
+include ../blocks/developer/developer
+include ../blocks/email/email
+include ../blocks/event/event
+include ../blocks/footer/footer
+include ../blocks/gallery/gallery
+
+include ../blocks/header/header
+include ../blocks/logo/logo
+include ../blocks/messenger/messenger
+include ../blocks/nav/nav
+include ../blocks/news/news
+include ../blocks/order/order_1
+
+include ../blocks/phone/phone
+include ../blocks/popup/popup
+include ../blocks/resource_preview/resource_preview
+include ../blocks/resume/resume
+include ../blocks/review/review
+
+include ../blocks/section/section_1
+include ../blocks/section/section_2
+include ../blocks/section/section_3
+include ../blocks/section/section_5
+include ../blocks/section/section_6
+include ../blocks/section/section_7
+include ../blocks/section/section_8
+include ../blocks/section/section_9
+include ../blocks/section/section_10
+include ../blocks/section/section_11
+include ../blocks/section/section_12
+include ../blocks/section/section_13
+
+include ../blocks/slider/slider_1
+
+include ../blocks/social/social
+include ../blocks/step/step
+include ../blocks/table/table_1
+include ../blocks/table/table_2
+include ../blocks/title/title
+include ../blocks/video/video
+
+block variables
+
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{title}
+        meta(name="description", content=description)
+
+        include ../includes/styles
+
+
+    body(class=pageClass)
+        +header()
+        +nav()
+        block content
+        +footer()
+
+        include ../includes/scripts

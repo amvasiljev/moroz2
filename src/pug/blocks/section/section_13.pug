@@ -1,0 +1,77 @@
+mixin section_13()
+    section.section.section_text.lazy(data-src="/assets/img/bg_snow_2.jpg")
+        .section__inner.section__inner_text
+          
+            h1 Очень длинный заголовок типовой страницы, чтобы настроить междустрочный интервал
+            h3 Сделал H3, т.к. H1 и H2 скорее всего будут одинаковыми по размеру на странице
+            h4 А этот сделал H4
+            .section__text
+                p Обычный текст не делаю жирным, как "вдруг" это случилось в макете - будет некрасиво, особеннно на средних экранах.
+                p Ниже пример жирного текста
+                p 
+                    strong Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                p Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.
+                p Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка.
+                p Грустный риторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь.
+            .section__text
+                h2 Таблица
+                +table_1()
+
+            .section__text 
+                h3 Маркированный список
+                ul
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+            .section__text 
+                p В макете говорится про три типа списков "нумерованные", "ненумерованные" и "маркированные". Есть только два типа - 1 и 3 и надо определиться со стилямиdiv
+            
+            .section__content.section__content_double
+                h2 Это две колонки текста
+                .section__half
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque voluptatem aut ratione velit omnis ullam iusto ea consequatur a!
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque voluptatem aut ratione velit omnis ullam iusto ea consequatur a!
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque voluptatem aut ratione velit omnis ullam iusto ea consequatur a!
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ut.
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ut.
+                .section__half
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ut.
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ut.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+
+            .section__content.section__content_double
+                h2 Это текст с картинкой
+                .section__half
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ut.
+                .section__half
+                    img(src="/assets/img/slide.jpg", alt="")
+            .section__content.section__content_double
+                h2 Это текст с картинкой наоборот
+                .section__half
+                    img(src="/assets/img/slide.jpg", alt="")
+                .section__half
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam vel officiis delectus impedit placeat veritatis quos totam animi eaque.
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ut.
+            
+            .section__content.section__content_news
+                h3 Новости
+                +news()
+                +news()
+                +news()
+                +news()
+                
+                

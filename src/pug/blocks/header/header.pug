@@ -1,0 +1,16 @@
+mixin header()
+	header.header.lazy(data-src="assets/img/bg_header.jpg")
+		.header__inner
+			.header__logo
+				+logo()
+				+city()
+			.header__buttons
+				.header__content
+					.header__title Подарим вашим детям праздник
+					+button('Оставить заявку','button_gold','/','#popup')
+					+button('Посмотреть актеров','button_red','/')
+			.header__callback
+				+phone('phone_header')
+				+button('Заказать звонок','button_gold','/','#popup')
+				+messenger()
+			+burger()

@@ -1,0 +1,31 @@
+.messenger{
+    display: none;
+    @media @768{
+        display: flex;
+
+    }
+    @media @320{
+        display: flex;
+        width: 235px;
+        justify-content: space-between;
+        margin: 0 auto;
+
+    }
+    &__item{
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        background-size: 40px;
+        padding-left: 50px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        color: @wt;
+        font-weight: 600;
+        &:last-child{
+            margin-left: 10px;
+            @media @320{
+                
+            }
+        }
+    }
+}

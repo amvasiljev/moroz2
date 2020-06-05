@@ -1,0 +1,13 @@
+mixin section_3()
+    .section.section_steps.lazy(data-src="/assets/img/bg_steps.jpg")
+        .section__inner
+            +title('Как мы работаем','title_steps')
+            .section__content.section__content_steps
+                +step('1','/assets/img/step_1.png','Вы оформляете заказ на сайте или по телефону')
+                +step('2','/assets/img/step_2.png','Обсуждаем детали: дату, количество детей, адрес')
+                +step('3','/assets/img/step_3.png','Наш артист повзонит вам накануне праздника для согласования деталей')
+                +step('4','/assets/img/step_4.png','Поздравление!')
+                +step('5','/assets/img/step_5.png','Оплата')
+                +step('','','','step_hidden')
+                +step('','','','step_hidden')
+                +step('','','','step_hidden')

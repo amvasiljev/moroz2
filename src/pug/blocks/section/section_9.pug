@@ -1,0 +1,16 @@
+mixin section_9()
+    .section.section_reviews.lazy(data-src="/assets/img/bg_snow_2.jpg")
+        .section__inner.section__inner_reviews
+            +title('Отзывы')
+            .section__content.section__content_double
+                .section__half
+                   +video('OMguFafuqrg')
+                .section__half
+                    +video('OMguFafuqrg')
+            .section__content.section__content_reviews
+                +review('/assets/img/review_1.jpg')
+                +review('/assets/img/review_2.jpg')
+                +review('/assets/img/review_2.jpg')
+                +review('/assets/img/review_2.jpg')
+            
+            +button('Все отзывы','button_gold')

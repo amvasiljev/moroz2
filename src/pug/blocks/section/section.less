@@ -1,0 +1,415 @@
+.section {
+    width: 100%;
+
+    &__inner {
+        max-width: 1180px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 0 70px;
+
+        &_order {
+            padding: 30px 0;
+        }
+
+        &_personal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0 70px;
+        }
+
+        &_reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0 70px;
+        }
+
+        &_gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0 70px;
+        }
+
+        @media @1200 {
+            padding: 30px 30px 70px;
+        }
+
+        @media @1024 {
+            padding: 30px 30px 70px;
+        }
+
+        @media @768 {
+            padding: 30px 30px 70px;
+        }
+
+        @media @320 {
+            padding: 30px 10px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        padding: 0 0 30px 0;
+
+        &_double {
+            justify-content: space-between;
+        }
+
+        &_order {
+            justify-content: center;
+        }
+
+        &_steps {
+            justify-content: space-between;
+        }
+
+        &_personal {
+            justify-content: space-between;
+            padding: 25px 0 50px 0;
+
+            @media @1024 {
+                justify-content: center;
+            }
+        }
+
+        &_best {
+            justify-content: space-between;
+            @media @768{
+                flex-flow: wrap;
+            }
+            @media @320{
+                flex-flow: wrap;
+            }
+        }
+
+        &_slider {
+            display: block;
+            position: relative;
+            padding: 50px 0 30px 0;
+
+            @media @1024,@768 {
+                padding: 30px 0;
+            }
+            @media @320{
+                padding: 20px 0;
+            }
+        }
+
+        &_events {
+            justify-content: space-between;
+            padding: 30px 0;
+        }
+
+        &_reviews {
+            justify-content: space-between;
+            padding: 30px 0 50px;
+        }
+
+        &_news{
+            justify-content: space-between;
+            padding: 30px 0 50px;
+        }
+
+
+    }
+
+    &__half {
+        width: calc(50% - 10px);
+
+        @media @320 {
+            width: 100%;
+        }
+    }
+
+
+    &__text{
+        padding: 20px 0 30px;
+        width: 100%;
+
+        li{
+            .rem(14);
+            color: @bk;
+            margin-bottom: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            &:before{
+                content:'';
+                display: block;
+                height: 12px;
+                width: 12px;
+                flex: 0 0 12px;
+                align-self: flex-start;
+                background: url('/assets/img/point.png') center center no-repeat;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+
+
+
+
+    &_video {
+        background: url(/assets/img/ice.png) repeat-x,
+            url(/assets/img/balls.png) no-repeat;
+        position: relative;
+
+        @media @1200 {
+            background: url(/assets/img/ice.png) repeat-x;
+            position: relative;
+        }
+
+        @media @1024 {
+            background: url(/assets/img/ice.png) repeat-x;
+            position: relative;
+        }
+
+        @media @768 {
+            background: url(/assets/img/ice.png) repeat-x;
+            position: relative;
+        }
+
+        @media @320 {
+            background: url(/assets/img/ice.png) repeat-x;
+            position: relative;
+        }
+
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(/assets/img/bg_snow_2.jpg);
+            background-position: center 0;
+            background-size: cover;
+            z-index: -1;
+        }
+
+
+        p {
+            .rem(18);
+            color: @bk;
+            line-height: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            @media @320{
+                .rem(16);
+                line-height: 1.44;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+    &_order {
+        height: 711px;
+
+        &_bottom {
+            height: 530px;
+        }
+
+        @media @320 {
+            height: unset;
+            background-image: unset !important;
+            background-color: @red;
+        }
+    }
+
+
+
+    &__subtitle {
+        .rem(16);
+        font-weight: 600;
+        color: @wt;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+
+        &_events {
+            color: @bk;
+            .rem(18);
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: @red;
+                .rem(22);
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__offer {
+        .rem(22);
+        font-weight: 600;
+        color: @gold;
+        margin-bottom: 25px;
+    }
+
+    &__warning {
+        .rem(16);
+        color: @wt;
+        font-weight: 600;
+        text-align: center;
+
+        @media @1024 {
+            padding-top: 10px;
+        }
+        @media @768 {
+            padding-top: 10px;
+        }
+
+        @media @320 {
+            padding-top: 10px;
+        }
+    }
+
+
+
+
+
+
+    &_steps {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 510px;
+        position: relative;
+
+        @media @768,@320{
+            height: unset;
+           
+        }
+
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(/assets/img/ice.png);
+            background-position: center 0;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+    }
+
+
+    &_personal {
+        background-color: @wt;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: cover;
+        height: 919px;
+
+        @media @1024 {
+            height: unset;
+        }
+        @media @768 {
+            height: unset;
+        }
+        @media @320 {
+            height: unset;
+        }
+    }
+
+    &_best {
+        position: relative;
+
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(/assets/img/ice.png);
+            background-position: center 0;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+    }
+
+    &_other {
+        @media @1370 {
+                background-position-x: -200px;
+
+        }
+        @media @1200 {
+                background-position-x: -200px;
+
+        }
+        @media @1024 {
+            background-image: none !important;
+        }
+        @media @768 {
+            background-image: none !important;
+        }
+        @media @320 {
+            background-image: none !important;
+        }
+    }
+
+    &_gallery {
+        @media @1024 {
+            background-image: none !important;
+        }
+        @media @768 {
+            background-image: none !important;
+        }
+        @media @320 {
+            background-image: none !important;
+        }
+    }
+
+    &_reviews {
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: cover;
+
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(/assets/img/ice.png);
+            background-position: center 0;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+    }
+
+    &_text {
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: cover;
+
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(/assets/img/ice.png);
+            background-position: center 0;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+    }
+}

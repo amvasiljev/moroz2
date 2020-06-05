@@ -1,0 +1,28 @@
+.phone{
+
+    &_header{
+        font-family: @font_2;
+        color: @wt;
+        .rem(40);
+        margin-bottom: 20px;
+        @media @1024{
+            .rem(30);
+        }
+        @media @768{
+            .rem(28);
+        }
+    }
+    &_footer{
+        padding-left: 50px;
+        height: 33px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 center;
+        background-image: url(/assets/img/phone.png);
+        display: flex;
+        align-items: center;
+    }
+    &_scroll{
+        .rem(30);
+    }
+}

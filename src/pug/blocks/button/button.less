@@ -1,0 +1,56 @@
+.button {
+    min-width: 280px;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: @font_2;
+    padding: 0 30px;
+    cursor: pointer;
+    z-index: 100;
+
+    @media @768,@320{
+        min-width: 242px;
+    }
+
+    &_gold {
+        background-color: @gold;
+        color: @red;
+        .rem(28);
+        box-shadow: @box;
+        transition: all 0.3s;
+         @media @768,@320{
+        .rem(20);
+    }
+
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: @box_hover;
+            transition: all 0.3s;
+        }
+    }
+
+    &_red {
+        background-color: transparent;
+        color: @gold;
+        .rem(24);
+        border: 2px solid @gold;
+        transition: all 0.3s;
+         @media @768,@320{
+        .rem(20);
+    }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: @red;
+            border-color: @red;
+            background-color: @wt;
+            transition: all 0.3s;
+        }
+    }
+
+
+}

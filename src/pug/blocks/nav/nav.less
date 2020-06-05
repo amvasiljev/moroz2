@@ -1,0 +1,266 @@
+.nav {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media @1024{
+        padding: 0 30px;
+    }
+    @media @768,@320{
+        display: none;
+    }
+
+
+    &__wrapper {
+        width: 100%;
+
+        border-top: 1px solid @red;
+
+        background-position: center 60px;
+        background-repeat: no-repeat;
+    }
+
+    &__item {
+        height: 100%;
+
+        &_group {
+            position: relative;
+        }
+
+
+        &_mobile {
+            color: @bk;
+            font-style: normal;
+            font-weight: 600;
+            .rem(16);
+            line-height: 110%;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: @gold;
+            }
+        }
+
+        &_active&_mobile {
+            color: @gold;
+
+            &:before {
+                display: none;
+            }
+        }
+
+    }
+
+    &__link {
+        .rem(24);
+        color: @bk;
+        font-family: @font_2;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+
+        @media @1024,
+        @768,
+        @320 {
+            .rem(20);
+        }
+
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: @red;
+            text-decoration: underline;
+        }
+
+        &_group {
+            color: @red;
+            background: url(/assets/img/burger.png) 0 center no-repeat;
+            padding: 0 0 0 45px;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: @red;
+                text-decoration: none;
+            }
+
+            @media @1024,
+            @768,
+            @320 {
+                padding: 0 0 0 25px;
+                background-size: 16px;
+
+            }
+        }
+    }
+
+    &_level2 {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: @wt;
+        border-top: 1px solid @red;
+        height: auto;
+        box-shadow: @box_menu;
+        z-index: 100;
+
+        @media @1024{
+            padding: 0 10px;
+        }
+
+        li {
+            padding: 0 20px;
+            @media @1024{
+                padding: 0 10px;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+
+                background-color: @hover;
+
+            }
+
+            &:last-of-type {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    height: 72px;
+                    width: 100%;
+                    background-image: url(/assets/img/ice.png);
+                    background-position: 0 100%;
+                    background-repeat: no-repeat;
+                    padding: 0 20px 72px 20px;
+                }
+            }
+
+            &:not(:last-child) a {
+                border-bottom: 1px solid @line;
+            }
+        }
+
+        a {
+            font-family: @font;
+            .rem(16);
+            font-weight: 600;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            padding: 0 0 0 35px;
+            white-space: nowrap;
+
+            @media @1024{
+                white-space: normal;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: @red;
+                text-decoration: none;
+            }
+        }
+
+
+        &_mobile {
+            position: unset;
+            margin-top: 20px;
+
+            li {
+                &:last-of-type {
+                    &:after {
+                        background: none;
+                    }
+                }
+            }
+
+            a {
+                .rem(14);
+            }
+        }
+
+
+    }
+
+    li,
+    a {
+        margin-bottom: 0;
+    }
+
+
+
+
+
+    &_outer {
+        position: fixed;
+        top: 0;
+        right: -287px;
+        background: @wt;
+        // height: 100vh;
+        width: 287px;
+        z-index: 1000;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 10px 10px 20px;
+        &:after{
+            content:'';
+            display: block;
+            height: 100vh;
+        }
+
+
+        @media @768,
+        @320,
+        @1024 {
+            display: flex;
+            
+        }
+    }
+
+
+    &_mobile {
+       
+        width: 100%;
+        flex: 0 auto;
+    }
+    
+
+    &_close {
+        background-image: url(/assets/img/close.png);
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__fake {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(38, 38, 38, 0.8);
+        display: none;
+        z-index: 100;
+    }
+
+}

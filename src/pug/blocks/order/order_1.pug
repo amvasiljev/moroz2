@@ -1,0 +1,11 @@
+mixin order_1(id,cl)
+    .order(class= cl)
+        
+        form(action="/").order__form
+            .order__group
+                input(type="text" placeholder="Имя").order__input
+                input(type="text" placeholder="Номер телефона").order__input.order__input_phone
+                input(type="text" placeholder="Дата").order__input.order__input_date
+                input.order__input_workemail(type="text" name="workemail" id= id)
+            .order__consent Отправляя форму, вы даете согласие на обработку ваших персональных данных и принимаете нашу политику конфиденциальности. Ваши данные будут в безопасности.
+            button(type="submit").order__submit Получить скидку

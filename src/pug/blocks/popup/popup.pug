@@ -1,0 +1,10 @@
+mixin popup(id)
+    .popup#popup
+        +title("Заказать звонок",'title_popup')
+        .popup__inner
+            form(action="/").popup__form
+                input(type="text" placeholder="Имя").popup__input
+                input(type="text" placeholder="").popup__input.popup__input_phone
+                input.popup__input_workemail(type="text" name="workemail" id= id)
+                button(type="submit").popup__submit Получить скидку
+        .popup__consent Отправляя форму, вы даете согласие на обработку ваших персональных данных и принимаете нашу политику конфиденциальности. Ваши данные будут в безопасности.

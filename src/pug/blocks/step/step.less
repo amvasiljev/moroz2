@@ -1,0 +1,88 @@
+.step {
+    background-repeat: no-repeat;
+    background-position-x: 66%;
+    background-position-y: 0%;
+    height: 242px;
+    width: 20%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @media @768{
+        width: calc(33% - 15px);
+        
+    }
+    @media @320{
+        width: 100%;
+        
+    }
+    &_hidden{
+        display: none !important;
+        @media @768,@320{
+            display: block !important;
+            background-image: unset !important;
+            height: 0;
+            &:after{
+                display: none;
+
+            }
+        }
+    }
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 96px;
+        height: 20px;
+        background: url(/assets/img/step_point.png) no-repeat center center;
+        position: absolute;
+        top: 32%;
+        right: -25%;
+        @media @768{
+            right: -70px;
+        }
+        @media @320{
+            display: none;
+        }
+    }
+    &:nth-child(3):after{
+        @media @768{
+            display: none;
+        }
+    }
+    &:nth-child(5):after{
+       
+            display: none;
+        
+    }
+    
+    
+
+    &__number {
+        .rem(100);
+        color: @wt;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: @red;
+        font-weight: 900;
+        align-self: flex-end;
+        height: 120px;
+        padding: 0;
+        margin-left: -10px;
+    }
+
+    &__icon {
+        height: 55px;
+        width: 55px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 17px 0 0 0;
+    }
+
+    &__content {
+        width: 100%;
+        height: 66px;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,5 @@
+mixin resource_preview(img,text,cl)
+    a(href="/").resource-preview(class= cl)
+        .resource-preview__image.lazy(data-src= img)
+        .resource-preview__caption= text
+
