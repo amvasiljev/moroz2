@@ -3,6 +3,10 @@
     margin-bottom: 30px;
     border: 1px solid @line;
     background-color: @wt;
+
+    @media @320{
+        width: 100%;
+    }
     &__image{
         height: 230px;
         padding: 20px;
@@ -47,5 +51,14 @@
         color: @bk;
         font-weight: 600;
         .rem(18);
+        @media @1024{
+            height: unset;
+        }
+        @media @768{
+            height: unset;
+        }
+        @media @320{
+            height: unset;
+        }
     }
 }
