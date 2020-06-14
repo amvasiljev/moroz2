@@ -6,12 +6,13 @@
     }
     @media @320{
         display: flex;
-        width: 235px;
+        width: 70px;
         justify-content: space-between;
-        margin: 0 auto;
-
+        
+        order: 1;
     }
     &__item{
+        background-image: url(/assets/img/whatsapp.svg);
         background-repeat: no-repeat;
         background-position: 0 center;
         background-size: 40px;
@@ -26,6 +27,12 @@
             @media @320{
                 
             }
+        }
+
+    }
+    &_scroll{
+        @media @320{
+            order: unset;
         }
     }
 }

@@ -4,6 +4,8 @@
         .rem(40);
         margin-bottom: 20px;
         margin-top: -20px;
+        background-color: transparent;
+        text-align-last: center;
         @media @1024{
             .rem(30);
         }
@@ -14,5 +16,10 @@
         @media @320{
             .rem(28);
             order: 1;
+            display: none;
+        }
+        &__option{
+            .rem(16);
+            color: @bk;
         }
 }

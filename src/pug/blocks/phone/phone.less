@@ -1,19 +1,30 @@
-.phone{
+.phone {
 
-    &_header{
+    &_header {
         font-family: @font_2;
         color: @wt;
         .rem(40);
         margin-bottom: 20px;
         margin-top: -30px;
-        @media @1024{
+
+        @media @1024 {
             .rem(30);
         }
-        @media @768{
+
+        @media @768 {
             .rem(28);
         }
+
+        @media @320 {
+
+            .rem(34);
+            text-align: center;
+            order: 2;
+            margin: 0;
+        }
     }
-    &_footer{
+
+    &_footer {
         padding-left: 50px;
         height: 33px;
         background-repeat: no-repeat;
@@ -23,7 +34,18 @@
         display: flex;
         align-items: center;
     }
-    &_scroll{
+
+    &_scroll {
         .rem(30);
+
+        @media @320 {
+            order: unset;
+            background-image: url(/assets/img/phone.svg);
+            background-repeat: no-repeat;
+            background-size: 40px;
+            background-position: center center;
+            height: 50px;
+            width: 50px;
+        }
     }
 }

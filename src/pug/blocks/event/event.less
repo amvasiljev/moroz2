@@ -38,6 +38,7 @@
         @media @320{
             background-image: unset !important;
             height: 113px;
+            position: relative;
         }
     }
     &__title{
@@ -52,6 +53,19 @@
         align-items: center;
         text-align: center;
 
+    }
+
+    &__subtitle{
+        display: none;
+        @media @320{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            color: @bk;
+            .rem(18);
+            text-align: right;
+        }
     }
 
     &__content{
